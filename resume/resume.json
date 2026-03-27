@@ -1,0 +1,96 @@
+{
+  "basics": {
+    "name": "Kennedy Mosoti",
+    "label": "Platform, Observability, and Automation Engineer",
+    "email": "kennedy.rmosoti@gmail.com",
+    "phone": "817-704-8106",
+    "url": "https://github.com/kmosoti",
+    "summary": "I enjoy working with automation and observability tooling, especially where there is room to turn brittle manual work into something repeatable and easier to reason about. My strongest areas are Python, Salt, and Splunk. I tend to gravitate toward hard systems problems, and nothing really feels too difficult if there is enough time, context, and room to iterate.",
+    "location": {
+      "city": "Arlington",
+      "region": "Texas",
+      "countryCode": "US"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/kennedymosoti/",
+        "username": "kennedymosoti"
+      },
+      {
+        "network": "GitHub",
+        "url": "https://github.com/kmosoti",
+        "username": "kmosoti"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "JPMorgan Chase via Netbuilder",
+      "position": "Engineer Consultant",
+      "startDate": "2024-10",
+      "summary": "Platform engineering and observability work across enterprise Splunk environments.",
+      "highlights": [
+        "Built and hardened Salt-based orchestration for Splunk upgrades, validating a 9.1.1 to 9.4.3 cluster upgrade and improving sequencing, failover handling, and post-upgrade remediation logic.",
+        "Improved the automated repave workflow by replacing a fixed blackout assumption with runtime-based alert suppression, preventing false paging during long-running infrastructure operations.",
+        "Investigated ingestion and stability issues in enterprise Splunk environments, including Kafka broker misconfiguration, skipped search filter rollouts, and host resource contention impacting sustained ingest.",
+        "Reduced repave threshold breaches across the Splunk estate by improving prioritization logic for older nodes, helping drive down backlog from historically high levels.",
+        "Contributed to platform reliability work across production and non-production environments, including farm break remediation, configuration drift correction, and operational cleanup tasks."
+      ]
+    },
+    {
+      "name": "Netbuilder",
+      "position": "Associate Observability Engineer",
+      "startDate": "2024-08",
+      "summary": "Consulting-side role focused on observability, automation, and rapid growth into enterprise platform work.",
+      "highlights": [
+        "Joined as a learner and was nominated onto the JPMorgan account within a few months based on technical ability and fit for platform automation and observability work.",
+        "Automated and debugged Splunk and Salt-backed workflows, with a strong emphasis on maintainable patterns and source-of-truth driven operational control.",
+        "Earned Splunk Admin, Power User, User, and Cribl User certifications early in tenure while ramping into large-scale enterprise logging environments."
+      ]
+    },
+    {
+      "name": "Data Annotation Tech",
+      "position": "AI Trainer",
+      "startDate": "2024-01",
+      "summary": "Evaluated AI-generated solutions for correctness, efficiency, and adherence to engineering best practices across Python, JavaScript, and SQL."
+    },
+    {
+      "name": "Amazon Web Services",
+      "position": "Associate Solutions Architect",
+      "startDate": "2023-01",
+      "endDate": "2023-11",
+      "summary": "Built proof-of-concept tools including a cloud migration cost estimator and a cloud-native VR development workflow using AWS services and JavaScript."
+    },
+    {
+      "name": "NCR Voyix",
+      "position": "Software Engineering Intern",
+      "startDate": "2022-05",
+      "endDate": "2022-08",
+      "summary": "Developed Python automation to improve mobile testing workflows and contributed to agile product work, including interface prototyping."
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Texas at Arlington",
+      "area": "Software Engineering",
+      "studyType": "B.S.",
+      "endDate": "2022"
+    }
+  ],
+  "certificates": [
+    {"name": "Splunk Certified Admin", "issuer": "Splunk"},
+    {"name": "Splunk Certified Power User", "issuer": "Splunk"},
+    {"name": "Splunk Certified User", "issuer": "Splunk"},
+    {"name": "Cribl Certified User", "issuer": "Cribl"},
+    {"name": "AWS Certified Solutions Architect – Associate", "issuer": "Amazon Web Services"}
+  ],
+  "skills": [
+    {"name": "Automation", "keywords": ["Python", "SaltStack", "workflow design", "operational tooling", "idempotent systems"]},
+    {"name": "Observability", "keywords": ["Splunk", "Cribl", "logging pipelines", "alerting", "platform reliability"]},
+    {"name": "Infrastructure", "keywords": ["AWS", "Terraform", "Linux", "Git", "Bash", "distributed systems"]}
+  ],
+  "meta": {
+    "theme": "developer-mono"
+  }
+}
