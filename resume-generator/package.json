@@ -1,0 +1,17 @@
+{
+  "name": "kennedy-resume-generator",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Agent-friendly JSON Resume workflow using resumed, resume-schema, and a developer-mono render target.",
+  "scripts": {
+    "validate": "resumed validate ./src/resume.json",
+    "render": "resumed render ./src/resume.json --output ./dist/resume.html --theme developer-mono",
+    "export:pdf": "resumed export ./src/resume.json --output ./dist/resume.pdf --theme developer-mono"
+  },
+  "dependencies": {
+    "resumed": "^7.0.0",
+    "jsonresume-theme-developer-mono": "^1.0.0",
+    "@jsonresume/schema": "^1.1.2"
+  }
+}
