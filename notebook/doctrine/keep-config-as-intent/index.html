@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A public systems notebook for observability, automation, platform work, doctrine, and project experiments.">
+    <title>Keep config as intent, not hidden business logic | Systems Notebook</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="/" aria-label="Kennedy Mosoti home">
+        <span class="brand-mark" aria-hidden="true">KM</span>
+        <span>Kennedy Mosoti</span>
+      </a>
+      <nav>
+        <a href="/#signal">Signal</a>
+        <a href="/#work">Work</a>
+        <a href="/notebook/">Systems Notebook</a>
+        <a href="/labs/">Project Labs</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+
+  <article class="article-page">
+    <header class="article-header">
+      <div class="section-shell">
+        <p class="eyebrow">doctrine</p>
+        <h1>Keep config as intent, not hidden business logic</h1>
+        <p class="hero-lede">Config should expose operational intent, not become a second programming language with worse tooling.</p>
+        <div class="article-meta">
+          <span class="status-pill">living</span>
+          <span>configuration</span>
+          <span>updated 2026-06-05</span>
+        </div>
+        <div class="tag-row">
+
+            <span>config</span>
+
+            <span>logging</span>
+
+            <span>standards</span>
+
+            <span>maintainability</span>
+
+        </div>
+      </div>
+    </header>
+
+    <div class="section-shell article-body">
+      <p>Config is useful when it makes shared references and operational choices inspectable.</p>
+<p>It becomes a mess when it turns into a second programming language with worse tooling. Logging standards are a good example. If every team litters free-form logs and custom exceptions through code, behavior becomes inconsistent and hard to reason about. But if the logging structure is defined clearly, reused consistently, and kept separate from business logic, the system becomes easier to operate.</p>
+<p>Config should describe knobs, references, thresholds, destinations, formats, and environment-specific values. It should not become the place where real behavior hides.</p>
+<h2>The boundary</h2>
+<p>Good config says:</p>
+<ul>
+<li>this environment points here</li>
+<li>this threshold means warning</li>
+<li>these fields belong in every log</li>
+<li>this destination receives this signal</li>
+<li>this setting is intentionally different in production</li>
+</ul>
+<p>Bad config hides:</p>
+<ul>
+<li>branching behavior nobody can test</li>
+<li>half a business workflow</li>
+<li>security choices without ownership</li>
+<li>operational rules that should be code</li>
+</ul>
+<p>The goal is inspectable intent.</p>
+
+    </div>
+  </article>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>Dallas-Fort Worth, TX - observability, automation, and machinery that tells on itself.</p>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

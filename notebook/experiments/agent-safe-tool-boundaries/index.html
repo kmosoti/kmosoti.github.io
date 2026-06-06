@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A public systems notebook for observability, automation, platform work, doctrine, and project experiments.">
+    <title>Agent-safe tool boundaries | Systems Notebook</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="/" aria-label="Kennedy Mosoti home">
+        <span class="brand-mark" aria-hidden="true">KM</span>
+        <span>Kennedy Mosoti</span>
+      </a>
+      <nav>
+        <a href="/#signal">Signal</a>
+        <a href="/#work">Work</a>
+        <a href="/notebook/">Systems Notebook</a>
+        <a href="/labs/">Project Labs</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+
+  <article class="article-page">
+    <header class="article-header">
+      <div class="section-shell">
+        <p class="eyebrow">experiment</p>
+        <h1>Agent-safe tool boundaries</h1>
+        <p class="hero-lede">The useful version of agents depends on explicit contracts, visible diffs, and state that can be inspected.</p>
+        <div class="article-meta">
+          <span class="status-pill">needs harness</span>
+          <span>agent-tooling</span>
+          <span>updated 2026-06-05</span>
+        </div>
+        <div class="tag-row">
+
+            <span>agents</span>
+
+            <span>tools</span>
+
+            <span>validation</span>
+
+            <span>interfaces</span>
+
+        </div>
+      </div>
+    </header>
+
+    <div class="section-shell article-body">
+      <p>I am interested in AI agents because the useful version is not magic.</p>
+<p>It is better context, tighter tool contracts, explicit state, and fewer vague handoffs.</p>
+<p>For infrastructure work, an agent should not get trust because it sounds confident. It should get trust because the workflow makes unsafe behavior harder:</p>
+<ul>
+<li>schema validation before mutation</li>
+<li>dry-run output when risk matters</li>
+<li>visible diffs before acceptance</li>
+<li>render checks for generated artifacts</li>
+<li>tests and logs tied to the change</li>
+<li>clear recovery path when the happy path breaks</li>
+</ul>
+<p>The standard is the same as any other tool.</p>
+<p>The input should be simple enough to use without folklore, but strict enough to prevent destructive ambiguity.</p>
+
+    </div>
+  </article>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>Dallas-Fort Worth, TX - observability, automation, and machinery that tells on itself.</p>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

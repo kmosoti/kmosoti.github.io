@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A public systems notebook for observability, automation, platform work, doctrine, and project experiments.">
+    <title>resume-builder sandbox | Systems Notebook</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="/" aria-label="Kennedy Mosoti home">
+        <span class="brand-mark" aria-hidden="true">KM</span>
+        <span>Kennedy Mosoti</span>
+      </a>
+      <nav>
+        <a href="/#signal">Signal</a>
+        <a href="/#work">Work</a>
+        <a href="/notebook/">Systems Notebook</a>
+        <a href="/labs/">Project Labs</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+
+  <section class="page-hero">
+    <div class="section-shell">
+      <p class="eyebrow">Project Lab Sandbox</p>
+      <h1>resume-builder</h1>
+      <p class="hero-lede">
+        A static browser demo for the core idea: structured input goes in, inspectable output comes out.
+        This is not PDF export, auth, or agent editing. It is the smallest honest web slice.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-shell sandbox-shell" data-resume-sandbox>
+    <div class="sandbox-toolbar">
+      <div>
+        <p class="eyebrow">Validation Status</p>
+        <h2 data-validation-title>Waiting for input</h2>
+      </div>
+      <div class="sandbox-actions">
+        <button class="button" type="button" data-reset-resume>Reset sample</button>
+        <button class="button" type="button" data-copy-resume-json>Copy JSON</button>
+        <button class="button primary" type="button" data-download-resume-html>Download HTML</button>
+      </div>
+    </div>
+
+    <div class="sandbox-grid">
+      <section class="editor-panel" aria-labelledby="json-editor-title">
+        <div class="panel-heading">
+          <h2 id="json-editor-title">Structured data</h2>
+          <span class="status-pill">json</span>
+        </div>
+        <textarea spellcheck="false" data-resume-json aria-label="Resume JSON editor"></textarea>
+      </section>
+
+      <section class="preview-panel" aria-labelledby="resume-preview-title">
+        <div class="panel-heading">
+          <h2 id="resume-preview-title">Rendered preview</h2>
+          <span class="status-pill" data-render-state>not rendered</span>
+        </div>
+        <div class="resume-preview" data-resume-preview></div>
+      </section>
+    </div>
+
+    <section class="validation-panel" aria-labelledby="validation-output-title">
+      <h2 id="validation-output-title">Validation output</h2>
+      <pre data-validation-output></pre>
+    </section>
+  </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>Dallas-Fort Worth, TX - observability, automation, and machinery that tells on itself.</p>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

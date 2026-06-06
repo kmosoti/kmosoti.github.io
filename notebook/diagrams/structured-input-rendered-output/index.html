@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A public systems notebook for observability, automation, platform work, doctrine, and project experiments.">
+    <title>Structured input, rendered output | Systems Notebook</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="/" aria-label="Kennedy Mosoti home">
+        <span class="brand-mark" aria-hidden="true">KM</span>
+        <span>Kennedy Mosoti</span>
+      </a>
+      <nav>
+        <a href="/#signal">Signal</a>
+        <a href="/#work">Work</a>
+        <a href="/notebook/">Systems Notebook</a>
+        <a href="/labs/">Project Labs</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+
+  <article class="article-page">
+    <header class="article-header">
+      <div class="section-shell">
+        <p class="eyebrow">diagram</p>
+        <h1>Structured input, rendered output</h1>
+        <p class="hero-lede">A small diagram for treating personal documents like source-controlled artifacts.</p>
+        <div class="article-meta">
+          <span class="status-pill">experiment</span>
+          <span>documents</span>
+          <span>updated 2026-06-05</span>
+        </div>
+        <div class="tag-row">
+
+            <span>diagrams</span>
+
+            <span>resume-builder</span>
+
+            <span>documents</span>
+
+            <span>validation</span>
+
+        </div>
+      </div>
+    </header>
+
+    <div class="section-shell article-body">
+      <p>This is the core shape behind resume-builder.</p>
+<pre><code class="language-text">structured resume data
+        |
+        v
+schema validation
+        |
+        v
+renderer
+        |
+        v
+HTML / PDF artifact
+        |
+        v
+preview, export, diff
+</code></pre>
+<p>The useful boundary is simple:</p>
+<pre><code class="language-text">structured input goes in
+inspectable output comes out
+</code></pre>
+<p>The agent version only becomes safe when the harness exists:</p>
+<pre><code class="language-text">instruction -&gt; edit -&gt; validate -&gt; render -&gt; screenshot -&gt; diff -&gt; accept
+</code></pre>
+<p>Without that harness, &quot;let the agent edit it&quot; is just another hidden-risk workflow with nicer branding.</p>
+
+    </div>
+  </article>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>Dallas-Fort Worth, TX - observability, automation, and machinery that tells on itself.</p>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
