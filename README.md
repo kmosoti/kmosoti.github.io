@@ -1,62 +1,26 @@
-# Systems Notebook
+# mosoti.dev
 
-Static website for `https://kmosoti.github.io/`.
+Kennedy Mosoti's portfolio, live at [mosoti.dev](https://mosoti.dev).
 
-This site is a public working surface for systems thinking, observability, automation, engineering doctrine, project labs, and small experiments.
+This repo is a **deploy target, not a source tree**. The pages here are the
+built output of ui-servo's site crate — an axum + maud + htmx site whose
+export binary renders every route from a shared manifest, copies assets,
+and refuses to emit a build that fails its link gate or changes a byte of
+the resume PDF. Design changes go through ui-servo's gauntlet loop
+(deterministic gates, a blind critic panel, and a human pick recorded as an
+exemplar), never by editing files here.
 
-## Local Build
+The Pages workflow uploads the repo as-is; there is no build step on CI by
+design — everything that can fail has already been checked where the source
+lives.
 
-```powershell
-python -m pip install -r requirements.txt
-python scripts\render_markdown.py --content content --templates templates --out .
-```
+Layout:
 
-The same renderer can build an isolated artifact:
+- `index.html`, `about/` — the site
+- `writing/`, `projects/` — meta-refresh stubs for retired routes
+- `assets/` — styles, tokens, the resume PDF, and the WASM islands
+- `404.html`, `CNAME`, `.nojekyll` — Pages plumbing
 
-```powershell
-python scripts\render_markdown.py --content content --templates templates --out _site
-```
-
-## Content Model
-
-Notebook pages live under `content/` and use YAML frontmatter:
-
-```yaml
----
-title: "Do not build tools that require folklore"
-slug: "do-not-build-tools-that-require-folklore"
-type: "doctrine"
-status: "living"
-domain: "automation"
-updated: "2026-06-05"
-tags:
-  - automation
-  - interfaces
-summary: "A tool that requires tribal knowledge is undocumented risk with an interface."
----
-```
-
-Allowed page types:
-
-```text
-doctrine | field-note | lab | diagram | experiment
-```
-
-Allowed statuses:
-
-```text
-living | working | experiment | local-only | web-demo-planned | needs-harness | archived
-```
-
-## Deployment
-
-The repo supports both:
-
-- Branch-based GitHub Pages from repository root.
-- GitHub Actions deployment from generated `_site/`.
-
-The workflow is in `.github/workflows/pages.yml`. For Actions deployment, set GitHub Pages source to **GitHub Actions** in repo settings.
-
-## License Note
-
-The code and templates are suitable for an MIT-licensed repository. Personal resume content, personal biography text, and generated visual assets are not automatically granted under the same license unless explicitly stated.
+The previous incarnation of this site (the Python/Jinja2 "systems notebook"
+and its markdown pieces) lives in this repo's history before the
+`ui-servo-redo` branch landed.
