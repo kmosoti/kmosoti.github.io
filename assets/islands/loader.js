@@ -110,8 +110,22 @@ class ResumeSandbox extends HTMLElement {
     // The element is here, and `loading` is what that is called.
     this.dataset.island = 'loading';
     if (this.#slot) {
-      // A load is already in flight for this element; its reaction is coming.
-      return;
+      if (!this.#slot.settled) {
+        // A load is already in flight for this element and its reaction is
+        // still coming; a disconnect only emptied the box. Putting this element
+        // back in it reuses that reaction instead of registering a second one,
+        // so a stalled import plus a hundred htmx swaps is still one reaction.
+        this.#slot.element = this;
+        return;
+      }
+      // The load settled while this element sat detached. The reaction found
+      // the box empty and returned — it could not clear this element's #slot,
+      // because emptying the box was exactly what severed its reference to
+      // this element. A box that is both settled and still held here is that
+      // phantom, and waiting on it would leave the element `loading` forever;
+      // dropping it lets a fresh reaction register below, against a wasm
+      // promise that is already cached on the success path.
+      this.#slot = null;
     }
 
     // Through a box, not directly. A promise reaction cannot be unregistered,
@@ -122,10 +136,11 @@ class ResumeSandbox extends HTMLElement {
     // and disconnect empties it. What a stalled import can still retain is one
     // emptied box per swap: bytes, deterministically, with no DOM attached and
     // no dependence on WeakRef or on when a collector feels like running.
-    const slot = { element: this };
+    const slot = { element: this, settled: false };
     this.#slot = slot;
     loadWasm().then(
       (module) => {
+        slot.settled = true;
         const element = slot.element;
         slot.element = null;
         if (!element) {
@@ -135,6 +150,7 @@ class ResumeSandbox extends HTMLElement {
         element.#boot(module);
       },
       (error) => {
+        slot.settled = true;
         const element = slot.element;
         slot.element = null;
         if (!element) {
@@ -161,12 +177,12 @@ class ResumeSandbox extends HTMLElement {
   // and out would accumulate one whole sandbox per swap. free() is the only
   // thing that runs the destructor.
   disconnectedCallback() {
-    // Sever first. A load still in flight has a reaction holding this element
-    // through its box, and emptying the box is the only way to let go of it —
-    // the reaction itself cannot be taken off the promise.
+    // Empty the box, but keep it. A load still in flight has a reaction holding
+    // this element through that box, and emptying it is the only way to let go
+    // — the reaction cannot be taken off the promise. Keeping the box is what
+    // lets a reconnect refill it rather than attach a second reaction.
     if (this.#slot) {
       this.#slot.element = null;
-      this.#slot = null;
     }
     const island = this.#island;
     this.#island = null;
