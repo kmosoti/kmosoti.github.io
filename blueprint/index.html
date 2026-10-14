@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#071d32" />
+  <meta name="description" content="Kennedy Mosoti: infrastructure, systems and reliability engineering. RHEL, SaltStack, Splunk, Python and Rust." />
+  <title>Kennedy Mosoti | Systems & Reliability</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner shell">
+      <a class="wordmark" href="#top" aria-label="Kennedy Mosoti, back to top"><span class="wordmark-symbol" aria-hidden="true">KM</span><span>Kennedy Mosoti</span></a>
+      <nav aria-label="Primary navigation" class="desktop-nav">
+        <a href="#incident">Case study</a>
+        <a href="#work">Production work</a>
+        <a href="#research">Independent systems</a>
+        <a href="#history">History</a>
+      </nav>
+      <a class="header-external" href="https://github.com/kmosoti" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero shell" aria-labelledby="hero-heading">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tiny-rule" aria-hidden="true"></span> Richardson, Texas · DFW</p>
+        <h1 id="hero-heading">Infrastructure,<br><em>Systems &amp;</em><br>Reliability Engineer.</h1>
+        <p class="hero-role">Associate Observability &amp; Reliability Engineer at <strong>NETbuilder</strong> · Client: JPMorgan Chase</p>
+        <p class="hero-desc">I work on Linux fleet convergence, access automation, and ingestion infrastructure. Most of the interesting problems begin where a successful command and a verified system state diverge.</p>
+        <p class="language-line">Core languages <strong>Python / Rust</strong></p>
+        <div class="hero-links">
+          <a class="action-primary" href="#incident">Investigate a production failure <span aria-hidden="true">↘</span></a>
+          <a class="action-link" href="#research">View independent systems <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="hero-drawing" aria-label="Logical diagram showing desired state moving through SaltStack to managed RHEL nodes and post-change verification; conceptual rather than a physical topology" role="img">
+        <div class="drawing-label">CONVERGENCE / LOGICAL SECTION</div>
+        <svg viewBox="0 0 620 570" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <pattern id="major-grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" stroke="#3d6a87" stroke-opacity=".32" fill="none" stroke-width=".7"/></pattern>
+            <pattern id="dots" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="0.8" cy="0.8" r=".6" fill="#7197a9" opacity=".27" /></pattern>
+          </defs>
+          <rect width="620" height="570" fill="url(#major-grid)" />
+          <path d="M46 96V502H574M66 96h-20M46 120h-10M46 164h-10M46 208h-10M46 252h-10M46 296h-10M46 340h-10M46 384h-10M46 428h-10M46 472h-10" stroke="#5e91a7" stroke-opacity=".72" stroke-width="1" fill="none" />
+          <g stroke="#77bad0" stroke-width="1.6" fill="none" stroke-linejoin="round">
+            <path d="M218 151l119-64 130 69-121 67z" fill="#123d59" fill-opacity=".5" />
+            <path d="M218 151v193l128 72V223z" fill="#0b2b45" />
+            <path d="M346 223l121-67v193l-121 67z" fill="#0a263d" />
+            <path d="M228 180l109-58 117 62-108 59z" stroke-opacity=".22" />
+            <path d="M228 244l118 66 110-60M228 288l118 66 110-61" stroke-opacity=".22" />
+            <path d="M256 188l92 49v138l-92-50z" fill="#113651" />
+            <path d="M360 248l78-43v116l-78 43z" fill="#071f35" />
+            <path d="M373 264l50-28M373 282l50-28M373 300l50-28" stroke="#e8af64" stroke-width="2" />
+            <path d="M279 222l47 25M279 240l47 25M279 258l47 25M279 276l47 25" stroke-opacity=".8" />
+            <circle cx="270" cy="218" r="3" fill="#e8af64" stroke="none"/><circle cx="270" cy="236" r="3" fill="#e8af64" stroke="none"/><circle cx="270" cy="254" r="3" fill="#e8af64" stroke="none"/>
+          </g>
+          <g fill="none" stroke="#e8af64" stroke-width="1.4">
+            <path d="M218 151H114V116"/><circle cx="218" cy="151" r="3" fill="#e8af64" />
+            <path d="M467 246H550V219"/><circle cx="467" cy="246" r="3" fill="#e8af64" />
+            <path d="M345 416V475H461"/><circle cx="345" cy="416" r="3" fill="#e8af64"/>
+          </g>
+          <g font-family="ui-monospace,monospace" font-size="12" fill="#e4ebed" letter-spacing="1.1">
+            <text x="68" y="92" fill="#e8af64">DESIRED STATE</text><text x="68" y="110" font-size="10" fill="#b7cbda">SaltStack</text>
+            <text x="475" y="193" fill="#e8af64">MANAGED</text><text x="475" y="210" font-size="10" fill="#b7cbda">RHEL HOSTS</text>
+            <text x="465" y="472" fill="#e8af64">VERIFY</text><text x="465" y="490" font-size="10" fill="#b7cbda">Applied state</text>
+            <text x="74" y="481" font-size="11" fill="#a9c1d2">CONCEPTUAL MODEL</text>
+            <text x="74" y="497" font-size="9" fill="#799cae">NOT A HOST INVENTORY</text>
+          </g>
+          <path d="M84 534H541" stroke="#5e91a7"/><g stroke="#5e91a7"><path d="M84 529v10M128 531v6M172 531v6M216 531v6M260 529v10M304 531v6M348 531v6M392 531v6M436 529v10M480 531v6M524 531v6"/></g>
+          <g fill="#7ea5ba" font-size="10" font-family="ui-monospace,monospace"><text x="85" y="554">DESIRE</text><text x="492" y="554">REALITY</text></g>
+        </svg>
+        <p class="drawing-caption">A declared state is not proof of convergence. The verification step is part of the operation.</p>
+      </div>
+    </section>
+
+    <section class="facts shell" aria-label="Production scope at a glance">
+      <div class="fact"><strong>3,000<span>+</span></strong><span>RHEL hosts<br>in operational scope</span></div>
+      <div class="fact"><strong>3,000<span>+</span></strong><span>RBAC roles<br>automated</span></div>
+      <div class="fact"><strong>&gt;20% <span class="arrow">→</span> &lt;5%</strong><span>Patch non-compliance<br>before / after</span></div>
+      <div class="fact fact-period"><span>Current role</span><strong>Oct 2024<br>to present</strong></div>
+    </section>
+
+    <section id="incident" class="incident-section shell" aria-labelledby="incident-heading">
+      <div class="section-header">
+        <p class="eyebrow">Case study / Process supervision</p>
+        <h2 id="incident-heading">The 90-minute stall<br><em>wasn't the rebuild.</em></h2>
+        <p class="intro">A Python parent process waited for its child. The child tried to write to an unread stdout/stderr pipe. Once that pipe filled, neither process could advance. The supervisor appeared to be waiting on a slow rebuild; it was participating in a deadlock.</p>
+      </div>
+      <div class="case-layout">
+        <div class="machine" id="machine">
+          <div class="machine-head">
+            <span class="machine-title">PIPE / BLOCKING WRITE</span>
+            <span class="machine-tag">Deterministic explanatory trace</span>
+          </div>
+          <div class="machine-controls" role="group" aria-label="Trace selection">
+            <button type="button" class="trace-option is-selected" id="mode-original" aria-pressed="true">Original failure</button>
+            <button type="button" class="trace-option" id="mode-corrected" aria-pressed="false">Concurrent drain</button>
+          </div>
+          <div class="processes">
+            <div class="process-node"><small>CHILD PROCESS</small><b id="child-state">Ready</b><span>stdout / stderr writer</span></div>
+            <div class="pipe-node">
+              <div class="pipe-main"><span>PIPE CAPACITY</span><strong id="pipe-amount">0 / 64 KiB</strong></div>
+              <div class="pipe-track" aria-label="Pipe capacity filled"><div class="pipe-fill" id="pipe-fill"></div></div>
+              <small id="pipe-state">Empty</small>
+            </div>
+            <div class="process-node"><small>PARENT PROCESS</small><b id="parent-state">Ready</b><span>subprocess supervisor</span></div>
+          </div>
+          <div class="machine-bottom">
+            <div class="step-info"><span>TRANSITION <strong id="step-number">0 / 4</strong></span><p id="step-desc" aria-live="polite">Child process created; the pipe is empty.</p></div>
+            <div class="step-actions"><button type="button" class="btn-muted" id="reset-trace">Reset</button><button type="button" class="btn-action" id="next-trace">Next transition <span aria-hidden="true">→</span></button></div>
+          </div>
+          <div class="machine-log"><span>EVENT TRACE</span><ol id="event-log" aria-live="polite"><li>Child process created; the pipe is empty.</li></ol></div>
+        </div>
+        <aside class="case-notes">
+          <div class="case-note"><span>Observed failure</span><strong>90+ minutes</strong><p>Rebuild supervision stalled despite the underlying operation not requiring that duration.</p></div>
+          <div class="case-note"><span>Resource boundary</span><strong>64 KiB</strong><p>Incident-specific pipe capacity. A blocking write cannot progress without a reader freeing capacity.</p></div>
+          <div class="case-note"><span>Resolution</span><strong>Drain while waiting</strong><p>Continuously consume child stdout/stderr alongside process supervision. The corrected trace is illustrative, not captured production telemetry.</p></div>
+          <p class="case-footnote">The trace uses deliberately discrete write/read events. Bytes accepted minus bytes consumed always equals the displayed occupancy. It does not simulate real-time throughput.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="work" class="work-section shell" aria-labelledby="work-heading">
+      <div class="section-header compact"><p class="eyebrow">Production work</p><h2 id="work-heading">The work behind<br><em>the numbers.</em></h2></div>
+      <div class="work-list">
+        <article class="work-entry"><span class="work-label">Fleet convergence</span><div><h3>Manage state, then verify it.</h3><p>SaltStack-driven desired-state convergence across more than 3,000 RHEL hosts, with attention to the gap between a command completing and its intended state actually taking effect.</p></div><span class="work-index">RHEL / SALT</span></article>
+        <article class="work-entry"><span class="work-label">Access control</span><div><h3>Make permissions reproducible.</h3><p>Automated more than 3,000 RBAC roles and supported least-privilege systemd configurations. Repeated access changes belong in controlled automation rather than undocumented manual edits.</p></div><span class="work-index">RBAC / SYSTEMD</span></article>
+        <article class="work-entry"><span class="work-label">Patch compliance</span><div><h3>Reduce non-compliance.</h3><p>Helped drive patch non-compliance from above 20% to below 5% through fleet operations and automation.</p></div><span class="work-index">BEFORE / AFTER</span></article>
+        <article class="work-entry"><span class="work-label">Telemetry ingestion</span><div><h3>Kafka → Logstash → Splunk.</h3><p>Operated observability infrastructure including a deployment with 14 Splunk indexers and two search heads. This is the production stack, not a generic Prometheus diagram.</p></div><span class="work-index">14 IDX / 2 SH</span></article>
+      </div>
+    </section>
+
+    <section id="research" class="research-section shell" aria-labelledby="research-heading">
+      <div class="section-header compact"><p class="eyebrow">Independent systems / Rust &amp; Python</p><h2 id="research-heading">Working outside<br><em>the ticket queue.</em></h2><p class="intro">Independent engineering work. Research directions and prototypes are identified as such; production claims belong only to production systems.</p></div>
+      <div class="research-grid">
+        <a class="research-item" href="https://github.com/kmosoti/Nomos" target="_blank" rel="noopener noreferrer"><span>Convergence engine</span><h3>nomos <span aria-hidden="true">↗</span></h3><p>Exploring masterless, cell-based state convergence with explicit reconciliation and verification boundaries.</p><small>Rust · Systems design</small></a>
+        <a class="research-item" href="https://github.com/kmosoti/FabricO11y" target="_blank" rel="noopener noreferrer"><span>Telemetry plane</span><h3>fabrico11y <span aria-hidden="true">↗</span></h3><p>A bounded telemetry plane with deliberate ingestion, storage, and query boundaries.</p><small>Rust · Observability</small></a>
+        <a class="research-item" href="https://github.com/kmosoti/Metron" target="_blank" rel="noopener noreferrer"><span>Worker execution research</span><h3>metron <span aria-hidden="true">↗</span></h3><p>Research into controlled execution environments and work-graph orchestration for AI workers.</p><small>Rust · Runtime research</small></a>
+        <a class="research-item" href="https://github.com/kmosoti/recursive-hexagonal-architecture" target="_blank" rel="noopener noreferrer"><span>Boundary verification</span><h3>recursive-hexagonal-architecture <span aria-hidden="true">↗</span></h3><p>Executable crate-boundary checks. Project-reported tests catch 22 of 22 seeded violations across 151 CI tests.</p><small>Rust · Verification</small></a>
+        <a class="research-item" href="https://github.com/kmosoti/gordian" target="_blank" rel="noopener noreferrer"><span>Experimental systems</span><h3>gordian <span aria-hidden="true">↗</span></h3><p>Exploration of local inference and orchestration mechanisms, with implementation details evolving through experiments.</p><small>Rust · Research</small></a>
+        <a class="research-item" href="https://github.com/kmosoti/ui-servo" target="_blank" rel="noopener noreferrer"><span>UI evaluation</span><h3>ui-servo <span aria-hidden="true">↗</span></h3><p>Deterministic evaluation loops for checking UI behavior against explicit expectations rather than aesthetics alone.</p><small>Evaluation · Tooling</small></a>
+      </div>
+    </section>
+
+    <section id="history" class="history-section shell" aria-labelledby="history-heading">
+      <div class="section-header compact"><p class="eyebrow">Professional chronology</p><h2 id="history-heading">Where the work<br><em>happened.</em></h2></div>
+      <div class="timeline">
+        <div class="timeline-entry"><span>Oct 2024 – Present</span><div><h3>NETbuilder <i>/ JPMorgan Chase</i></h3><p>Associate Observability &amp; Reliability Engineer</p></div></div>
+        <div class="timeline-entry"><span>2023</span><div><h3>Amazon Web Services</h3><p>Associate Solutions Architect · Cloud migration TCO modeling and Amplify prototypes</p></div></div>
+        <div class="timeline-entry"><span>2022</span><div><h3>NCR Voyix</h3><p>Software Engineer Intern · Python mobile test automation</p></div></div>
+        <div class="timeline-entry"><span>2019 – 2022</span><div><h3>ServiceLink</h3><p>IT Support · SQL troubleshooting</p></div></div>
+        <div class="timeline-entry"><span>Dec 2022</span><div><h3>University of Texas at Arlington</h3><p>B.S. Software Engineering</p></div></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer shell"><span>KENNEDY MOSOTI <i> / </i> RICHARDSON, TX</span><a href="https://github.com/kmosoti" target="_blank" rel="noopener noreferrer">Source repositories ↗</a><a href="#top">Back to top ↑</a></footer>
+</body>
+</html>
